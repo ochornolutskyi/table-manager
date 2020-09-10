@@ -1,0 +1,20 @@
+{
+   "name": "table-manager",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "server": "nodemon server.js",
+      "client": "npm run start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\" "
+   },
+   "author": "ochornolutskyi",
+   "license": "ISC",
+   "devDependencies": {
+      "concurrently": "^5.3.0",
+      "nodemon": "^2.0.4"
+   },
+   "dependencies": {
+      "express": "^4.17.1"
+   }
+}
