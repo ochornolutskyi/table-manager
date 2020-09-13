@@ -58,7 +58,7 @@ const table = {
 };
 
 app.get("/api/*", (req, res) => {
-   res.send(table);
+   setTimeout(() => res.send(table), 2500);
 });
 app.get("*", (req, res) => {
    res.sendfile(path.join(__dirname, "client/build", "index.html"));

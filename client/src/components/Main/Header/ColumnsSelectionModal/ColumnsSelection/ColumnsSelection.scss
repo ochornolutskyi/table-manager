@@ -1,0 +1,67 @@
+@import "../../../../../SCSS_VERIABLES.scss";
+
+.columns-selection {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   &__lists {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      .search-input {
+         outline: none;
+         width: 100%;
+         height: 30px;
+         margin-bottom: 25px;
+      }
+      hr {
+         border: none;
+         width: 1px;
+         background-color: $backgroundColorModalList;
+      }
+   }
+   .available-ul,
+   .selected-ul {
+      max-height: 850px;
+      overflow-y: auto;
+      padding: 0;
+      max-width: 350px;
+      width: 100%;
+      list-style: none;
+      height: inherit;
+      padding: 20px;
+      background-color: $backgroundColorModalList;
+      .columns-list-item {
+         height: 30px;
+         line-height: 30px;
+
+         color: $colorPrimary;
+         border-top: 1px solid $colorPrimary;
+      }
+      .columns-list-item:last-child {
+         border-bottom: 1px solid $colorPrimary;
+      }
+      .columns-list-item:hover {
+         background-color: $backgroundColorPrimary;
+         color: #fff;
+      }
+   }
+   .available-ul {
+      align-self: flex-start;
+      .columns-list-item {
+         cursor: move;
+      }
+   }
+   .selected-ul {
+      align-self: flex-end;
+      height: 100%;
+      padding-top: 75px;
+      &__item {
+         display: flex;
+         justify-content: center;
+         position: relative;
+      }
+   }
+}
